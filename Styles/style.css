@@ -10,12 +10,30 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
+}
+.main-header {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly;
+}
+.main-header img {
+  width: 15vw;
 }
 .main-nav {
-  padding: 1rem 6rem 1rem 2rem;
   display: flex;
+  padding: 2rem;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 770px) {
+  .main-nav {
+    display: none;
+  }
+  .main-header img {
+    padding: 1rem;
+    width: 35vw;
+  }
 }
 header {
   background-color: white;
@@ -138,6 +156,7 @@ ul {
   padding-top: 10rem;
   font-size: 3rem;
   font-weight: 700;
+  text-align: center;
   color: var(--bg-body);
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
   animation: fadeIn linear 1s;
@@ -200,16 +219,17 @@ ul {
 .homepage-guiding-principles h2 {
   padding-top: 2rem;
   font-size: 2rem;
+  text-align: center;
 }
 .down-arrow {
   padding: 1rem;
-  width: 3%;
+  width: 10vw;
 }
 .guiding-principle-article {
   display: flex;
   align-items: center;
   text-align: center;
-  width: 50%;
+  width: 80vw;
 }
 .guiding-principle-article-right {
   border-top-left-radius: 2rem;
@@ -232,14 +252,14 @@ ul {
 }
 .guiding-principle-left-image {
   border-radius: 2rem;
-  width: 40%;
+  width: 25vw;
   margin: 2rem;
   margin-left: -20vw;
   margin-right: 20vw;
 }
 .guiding-principle-right-image {
   border-radius: 2rem;
-  width: 40%;
+  width: 25vw;
   margin: 2rem;
   margin-left: 20vw;
   margin-right: -20vw;
@@ -331,9 +351,7 @@ ul {
   font-size: 1.2em;
   padding: 0 15% 0 15%;
 }
-.register-think-positive a {
-  position: absolute;
-  left: 62.5%;
+.think-positive-session a {
   margin-top: 1rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -343,7 +361,7 @@ ul {
   color: white;
   transition: 0.2s ease-in-out;
 }
-.register-think-positive a:hover {
+.think-positive-session a:hover {
   background-color: var(--accent-color1);
   color: black;
 }
@@ -409,7 +427,4 @@ ul {
 }
 .footer-column-container a {
   color: white;
-}
-.footer-column-container img {
-  width: 10%;
 }
