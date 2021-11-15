@@ -142,7 +142,7 @@ ul {
   border-color: var(--accent-color2);
 }
 #main-nav-coaching a,
-#mobile-nav-coaching {
+#mobile-nav-coaching a{
   color: var(--accent-color2);
 }
 #main-nav-leadership,
