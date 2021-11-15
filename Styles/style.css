@@ -42,7 +42,7 @@
   }
 }
 .hamburger {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   top: 1rem;
   right: 1rem;
@@ -55,20 +55,18 @@
   display: none;
 }
 .menu {
-  position: fixed;
+  position: absolute;
   transform: translateY(-1000rem);
   transition: transform 0.2s;
   text-align: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 99;
-  background: var(--bg-light);
+  top: 10;
+  background: var(--bg-body);
   color: white;
   list-style: none;
-  padding-top: 4rem;
-  border-radius: 0;
+  padding-top: 1rem;
+  border: var(--accent-color1) solid 2px;
+  border-radius: 2rem;
 }
 .showMenu {
   transform: translateY(0);
@@ -123,7 +121,7 @@ ul {
   padding: 1em;
   border: solid black 2px;
   border-radius: 2rem;
-  margin: 0 25vw 1rem 25vw;
+  margin: 1rem;
 }
 #main-nav-home,
 #mobile-nav-home {
