@@ -238,6 +238,7 @@ ul {
   -moz-animation: fadeIn linear 1s;
   -o-animation: fadeIn linear 1s;
   -ms-animation: fadeIn linear 1s;
+  line-height:1.2;
 }
 
 @keyframes fadeIn {
