@@ -432,6 +432,7 @@ header {
 }
 #guiding-principle-experience {
   background: linear-gradient(0.25turn, white 10%, var(--bg-dark) 50%);
+  margin-bottom: 2rem;
 }
 /*SECTION DIVIDERS*/
 .section-divider {
