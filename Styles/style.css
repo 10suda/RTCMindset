@@ -279,13 +279,14 @@ header {
   border-right: 1rem solid var(--accent-color1);
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  width: 60vw;
+  max-width: 60rem;
 }
 
 #main-image-text {
   position: absolute;
-  padding-top: 5vw;
-  font-size: min(3rem, 4vw);
+  padding-top: max(5vw, 4rem);
+  font-size: min(3.5rem, 7vw);
+  max-width: 43rem;
   font-weight: 700;
   text-align: center;
   color: var(--bg-body);
@@ -296,6 +297,15 @@ header {
   -o-animation: fadeIn linear 1s;
   -ms-animation: fadeIn linear 1s;
   line-height: 1.2;
+}
+@media only screen and (max-width: 890px) {
+  .homepage-main img {
+    border-radius: 0;
+    width: 100vw;
+    border-right: none;
+    border-left: none;
+    border-top: 0.75rem solid var(--accent-color1);
+  }
 }
 
 @keyframes fadeIn {
