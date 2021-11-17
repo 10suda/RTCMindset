@@ -81,7 +81,7 @@ header {
   }
   .main-header img {
     padding: 1rem;
-    width: 35vw;
+    width: max(18rem, 35vw);
   }
   .homepage-main img {
     width: 80vw;
