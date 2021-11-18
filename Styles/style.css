@@ -441,6 +441,7 @@ header {
   margin-bottom: 2rem;
 }
 /*SECTION DIVIDERS*/
+/*cyan slice*/
 .section-divider {
   height: 4rem;
   margin: 0 0 1rem 0;
@@ -450,12 +451,14 @@ header {
     white 50%
   );
 }
+/**/
 .shapedivider-3964 {
   overflow: hidden;
   position: relative;
 }
 .shapedivider-3964::before {
   content: "";
+  font-family: "shape divider from ShapeDividers.com";
   position: absolute;
   bottom: -1px;
   left: -1px;
@@ -464,14 +467,14 @@ header {
   z-index: 3;
   pointer-events: none;
   background-repeat: no-repeat;
-  background-size: 100% 100px;
+  background-size: 300% 300px;
   background-position: 50% 100%;
-  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.646 0.558" preserveAspectRatio="none"><path d="M2.646.558V0L1.323.53 0 0v.558z" fill="%23e60a8c"/></svg>');
+  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.646 0.558" preserveAspectRatio="none"><path d="M2.646.558V0L1.323.53 0 0v.558z" fill="%23ff9600"/></svg>');
 }
 
 @media (min-width: 768px) {
   .shapedivider-3964::before {
-    background-size: 100% 100px;
+    background-size: 300% 300px;
     background-position: 50% 100%;
   }
 }
@@ -482,13 +485,13 @@ header {
     left: -0.1vw;
     right: -0.1vw;
     top: -0.1vw;
-    background-size: 100% 100px;
+    background-size: 300% 300px;
     background-position: 50% 100%;
   }
 }
 @media (min-width: 2100px) {
   .shapedivider-3964::before {
-    background-size: 100% calc(2vw + 100px);
+    background-size: 300% calc(2vw + 300px);
   }
 }
 
@@ -630,7 +633,7 @@ header {
   gap: 2rem;
   justify-content: center;
   padding-block: 5rem;
-  border-top: var(--primary-color) 0.25rem solid;
+  border-top: var(--accent-color2) 0.25rem solid;
 }
 .about-pic-title-container {
   display: flex;
@@ -666,7 +669,7 @@ header {
   width: 2.5rem;
   height: 2.5rem;
   font-weight: 700;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color2);
   color: black;
   text-align: center;
   padding: 0;
@@ -709,16 +712,22 @@ header {
 .image-column img {
   width: max(12rem, 15vw);
 }
-/*Coaching Page*/
+/*Coaching Page & OD Page*/
 .coaching-main {
   padding: 1rem;
   border-top: var(--accent-color2) 0.25rem solid;
 }
-.coaching-main h2 {
+.od-main {
+  padding: 1rem;
+  border-top: var(--bg-dark) 0.25rem solid;
+}
+.coaching-main h2,
+.od-main h2 {
   padding-block: 4rem;
   text-align: center;
 }
-.coaching-container-outside {
+.coaching-container-outside,
+.od-container-outside {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -730,6 +739,9 @@ header {
 .coaching-container-inside {
   max-width: 30vw;
 }
+.od-container-inside {
+  max-width: 22.5vw;
+}
 .icon-header-combo {
   display: flex;
   align-items: center;
@@ -740,10 +752,20 @@ header {
   aspect-ratio: 1;
 }
 @media only screen and (max-width: 890px) {
-  .coaching-container-outside {
+  .coaching-container-outside,
+  .od-container-outside {
     flex-direction: column;
   }
-  .coaching-container-inside {
+  .coaching-container-inside,
+  .od-container-inside {
     max-width: 80vw;
   }
+}
+
+/*Leadership Page*/
+.main-leadership {
+  border-top: var(--primary-color) 0.25rem solid;
+}
+.main-leadership h2 {
+  padding-bottom: 4rem;
 }
