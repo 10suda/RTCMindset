@@ -102,6 +102,8 @@ header {
 }
 .menu {
   position: fixed;
+  overflow: auto;
+  white-space: nowrap;
   transform: translateX(1000%);
   transition: transform 0.2s;
   text-align: center;
