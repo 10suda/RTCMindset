@@ -136,8 +136,10 @@ header {
 .mobile-nav {
   align-items: stretch;
 }
-.mobile-nav a {
+.mobile-nav a,
+.mobile-nav div {
   display: flex;
+  flex-direction: column;
   white-space: initial;
   justify-content: center;
   padding: 0;
@@ -172,7 +174,9 @@ header {
 }
 #main-nav-coaching,
 #main-nav-coaching .nav-dropdown-content,
-#mobile-nav-coaching {
+#mobile-nav-coaching,
+#mobile-nav-coaching div {
+  color: var(--accent-color2);
   border-color: var(--accent-color2);
 }
 #main-nav-coaching a,
@@ -184,15 +188,18 @@ header {
   border-color: var(--primary-color);
 }
 #main-nav-leadership a,
-#mobile-nav-leadership a {
+#mobile-nav-leadership a,
+#mobile-nav-leadership div {
   color: var(--primary-color);
 }
+
 #main-nav-od,
 #mobile-nav-od {
   border-color: var(--bg-dark);
 }
 #main-nav-od a,
-#mobile-nav-od a {
+#mobile-nav-od a,
+#mobile-nav-od div {
   color: var(--bg-dark);
 }
 #main-nav-about,
@@ -203,7 +210,8 @@ header {
   border-color: var(--accent-color2);
 }
 #main-nav-about a,
-#mobile-nav-about a {
+#mobile-nav-about a,
+#mobile-nav-about div {
   color: var(--accent-color2);
 }
 .nav-dropdown {
