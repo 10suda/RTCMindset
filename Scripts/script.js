@@ -4,6 +4,8 @@ const hamburger = document.querySelector(".hamburger");
 const closeIcon = document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
 const mobileDropItem = document.querySelectorAll(".mobile-nav li");
+const learnMoreButton = document.querySelectorAll(".learn-more");
+const bioPara = document.querySelectorAll(".person-bio");
 const targetElement = [0, 0, 0, 0, 0];
 const mainElement = [0, 0, 0, 0, 0];
 const navColorList = ["#2850FF", "#FF9600", "#E60A8C", "#2850FF", "#FF9600"];
@@ -50,4 +52,21 @@ function toggleMobileDropDown() {
 }
 mobileDropItem.forEach((item) => {
   item.addEventListener("click", toggleMobileDropDown);
+});
+
+function toggleLearnMore() {
+  if (
+    bioPara[this.dataset.indexNumber].style.display == "" ||
+    bioPara[this.dataset.indexNumber].style.display == "none"
+  ) {
+    bioPara[this.dataset.indexNumber].style.display = "block";
+    learnMoreButton[this.dataset.indexNumber].innerHTML = "- Collapse";
+  } else {
+    bioPara[this.dataset.indexNumber].style.display = "none";
+    learnMoreButton[this.dataset.indexNumber].innerHTML = "+ Learn More";
+  }
+}
+
+learnMoreButton.forEach((item) => {
+  item.addEventListener("click", toggleLearnMore);
 });
