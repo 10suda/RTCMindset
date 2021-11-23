@@ -252,6 +252,7 @@ header {
   background-color: var(--bg-dark);
   display: flex;
   padding: 4rem;
+  gap: 2rem;
   margin-top: 4rem;
   border: solid var(--accent-color1) 0.5rem;
 }
@@ -266,7 +267,6 @@ header {
   font-weight: 200;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 .footer-column-container h4 {
   font-weight: 600;
@@ -826,6 +826,9 @@ header {
   font-size: 1.25em;
   font-weight: 600;
 }
+.learn-more {
+  cursor: pointer;
+}
 .person-title {
   font-size: 0.9em;
   font-weight: 400;
@@ -833,6 +836,9 @@ header {
 .person-quote {
   font-style: italic;
   font-weight: 400;
+}
+.person-bio {
+  display: none;
 }
 .person-wrapper {
   display: flex;
