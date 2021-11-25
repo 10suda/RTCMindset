@@ -1002,3 +1002,150 @@ footer a:hover {
   flex-direction: column;
   align-items: center;
 }
+/*Coaching Mindset*/
+.program-main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+#coaching-mindset-main {
+  border-top: 0.25rem var(--accent-color2) solid;
+}
+hr {
+  height: 2px;
+  border-width: 0;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  margin-top: 1rem;
+}
+.program-image {
+  max-width: 60%;
+  padding-top: 1rem;
+  margin-inline: auto;
+}
+.program-header {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.program-container {
+  display: flex;
+  border: 0.2rem solid var(--accent-color2);
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.program-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.contact-button {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 3rem;
+  height: 5rem;
+  color: var(--primary-color);
+  font-size: 1.2em;
+  margin-inline: auto;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.contact-button:hover {
+  border: 0.2rem solid var(--accent-color2);
+  color: var(--accent-color2);
+  transform: scale(1.1);
+}
+.program-sidebar {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.program-sidebar h4 {
+  padding-top: 1rem;
+}
+.program-info {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.right-border {
+  border-right: 0.2rem solid var(--accent-color2);
+}
+@media only screen and (max-width: 1100px) {
+  .program-container {
+    flex-direction: column;
+  }
+  .right-border {
+    border-right: 0;
+  }
+  .program-main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .program-info,
+  .program-sidebar {
+    width: 80vw;
+  }
+  .program-image {
+    display: none;
+  }
+  .program-main {
+    gap: 0;
+  }
+}
+/*Chevrons*/
+.chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.4em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+  color: var(--accent-color2);
+  margin-right: 0.5rem;
+}
+
+.chevron.right:before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.chevron.left:before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+/*Bursting with Improv*/
+#bursting-improv-main {
+  border-top: 0.25rem solid var(--bg-dark);
+}
+#bursting-improv-main .program-container {
+  border: 0.2rem solid var(--bg-dark);
+}
+#bursting-improv-main .right-border {
+  border-color: var(--bg-dark);
+}
+#bursting-improv-main .chevron::before {
+  color: var(--bg-dark);
+}
+#bursting-improv-main .contact-button:hover {
+  color: var(--bg-dark);
+  border-color: var(--bg-dark);
+}
