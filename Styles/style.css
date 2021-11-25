@@ -278,6 +278,12 @@ header {
 .footer-column-container a {
   color: white;
 }
+footer .icon-header-combo img {
+  padding-right: 0.5rem;
+}
+footer a:hover {
+  color: black;
+}
 /*Start of homepage content*/
 .homepage-main {
   display: flex;
