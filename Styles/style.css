@@ -36,6 +36,9 @@ ul {
   text-decoration: none;
   border-radius: 2rem;
 }
+li {
+  list-style: none;
+}
 .section-header {
   font-size: min(3rem, 6vw);
   text-align: center;
@@ -877,4 +880,119 @@ header {
 /*Meet Our Associates*/
 .meet-our-associates-main h2 {
   padding-bottom: 0rem;
+}
+/*Contact Us*/
+.contact-us-header {
+  padding-top: 3rem;
+  border-top: 0.25rem solid var(--accent-color2);
+}
+.contact-us-main {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 2rem 0 2rem 2rem;
+  border: 0.25rem var(--accent-color2) solid;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.label-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.red-star {
+  font-size: 1.25em;
+  color: red;
+}
+.contact-information-container {
+  background-color: var(--accent-color2);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin: 2rem 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  color: white;
+}
+.contact-information-container a {
+  color: white;
+}
+.contact-information-container .icon-header-combo {
+  display: flex;
+  gap: 1rem;
+}
+.contact-us-main input,
+.contact-us-main textarea {
+  border: none;
+  border-bottom: 1px solid grey;
+}
+.contact-us-main input:focus,
+.contact-us-main textarea:focus {
+  outline: none;
+}
+
+.contact-us-main input::placeholder,
+.contact-us-main textarea::placeholder {
+  color: grey;
+}
+.contact-us-main button {
+  font-family: "Poppins", sans-serif;
+  margin-top: 2rem;
+  border: none;
+  padding: 1rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: var(--accent-color2);
+  color: white;
+  font-size: 1.25em;
+  border-radius: 2rem;
+}
+.contact-us-main button:hover {
+  background-color: grey;
+}
+@media only screen and (max-width: 890px) {
+  .contact-us-main {
+    flex-direction: column;
+  }
+  .contact-form {
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 0;
+    margin: 2rem 2rem 0 2rem;
+    gap: 0;
+  }
+  .contact-information-container {
+    margin: 0 2rem 2rem 2rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 0;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  .label-wrapper {
+    padding-top: 1.5rem;
+  }
+}
+/*Thank You*/
+.thank-you-main {
+  border-top: 0.25rem solid var(--accent-color2);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
