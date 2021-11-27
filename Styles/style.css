@@ -1292,3 +1292,14 @@ hr {
     )
     5;
 }
+/*Our Leadership Approach*/
+
+.our-leadership-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 0.25rem solid var(--primary-color);
+}
+.our-leadership-main p {
+  max-width: 50vw;
+}
