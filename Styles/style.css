@@ -1196,6 +1196,11 @@ hr {
   border-color: var(--primary-color);
   width: 50vw;
 }
+@media only screen and (max-width: 1100px) {
+  #leadership-project-main .contact-button {
+    width: 80vw;
+  }
+}
 /* Style the tab */
 .tab {
   overflow: hidden;
