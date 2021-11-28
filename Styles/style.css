@@ -3,6 +3,7 @@
   --primary-color: #e60a8c;
   --accent-color1: #a0e6e6;
   --accent-color2: #ff9600;
+  --accent-color3: #ff4613;
   --bg-dark: #2850ff;
   --bg-light: #ded6d6;
   --bg-body: #fff;
@@ -643,6 +644,12 @@ footer a:hover {
   width: 35%;
   border-radius: 50%;
 }
+#main-button {
+  color: var(--accent-color3);
+  border-color: var(--accent-color3);
+  max-width: 80%;
+  margin-bottom: 3rem;
+}
 /*About Us Content*/
 .about-section {
   display: flex;
@@ -733,10 +740,16 @@ footer a:hover {
 .coaching-main {
   padding: 1rem;
   border-top: var(--accent-color2) 0.25rem solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .od-main {
   padding: 1rem;
   border-top: var(--bg-dark) 0.25rem solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .coaching-main h2,
 .od-main h2 {
@@ -768,6 +781,16 @@ footer a:hover {
   height: 2rem;
   aspect-ratio: 1;
 }
+#coaching-button,
+#od-button,
+#leadership-button {
+  max-width: 80%;
+  margin-top: 2rem;
+}
+#od-button {
+  border-color: var(--bg-dark);
+  color: var(--bg-dark);
+}
 @media only screen and (max-width: 890px) {
   .coaching-container-outside,
   .od-container-outside {
@@ -785,6 +808,10 @@ footer a:hover {
 }
 .main-leadership h2 {
   padding-bottom: 4rem;
+}
+#leadership-button {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 /*Meet our Coaches*/
 .meet-our-coaches-main,
@@ -1049,13 +1076,18 @@ hr {
   font-family: "Poppins", sans-serif;
   background-color: white;
   border: 0.2rem solid var(--accent-color2);
-  border-radius: 3rem;
+  border-radius: 1rem;
   height: 5rem;
   color: var(--accent-color2);
   font-size: 1.2em;
   margin-inline: auto;
+  padding: 1rem;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  margin-block: 1rem;
+  height: 100%;
 }
 .contact-button:hover {
   transform: scale(1.1);
@@ -1077,6 +1109,7 @@ hr {
 }
 .right-border {
   border-right: 0.2rem solid var(--accent-color2);
+  width: 50vw;
 }
 @media only screen and (max-width: 1100px) {
   .program-container {
@@ -1161,6 +1194,7 @@ hr {
 #leadership-project-main .contact-button {
   color: var(--primary-color);
   border-color: var(--primary-color);
+  width: 50vw;
 }
 /* Style the tab */
 .tab {
@@ -1171,6 +1205,12 @@ hr {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  max-width: 25rem;
+}
+.program-tab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -1199,7 +1239,6 @@ hr {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 1rem 2rem;
 }
 .program-tab-container table {
   text-align: center;
@@ -1302,4 +1341,35 @@ hr {
 }
 .our-leadership-main p {
   max-width: 50vw;
+}
+/*Consultative Selling/Holistic Marketing uses same selectors*/
+#consultative-selling-main {
+  border-top: 0.25rem solid var(--primary-color);
+}
+#consultative-selling-main .contact-button,
+#consultative-selling-main hr {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+#consultative-selling-main .right-border {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+#consultative-selling-main hr {
+  background-color: var(--primary-color);
+}
+#consultative-selling-main .program-container {
+  border: 0.2rem solid var(--primary-color);
+}
+#consultative-selling-main .right-border {
+  border-color: var(--primary-color);
+}
+#consultative-selling-main .chevron::before {
+  color: var(--primary-color);
+}
+@media only screen and (max-width: 1100px) {
+  #consultative-selling-main .right-border {
+    gap: 1rem;
+  }
 }
