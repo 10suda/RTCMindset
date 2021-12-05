@@ -1378,3 +1378,10 @@ hr {
     gap: 1rem;
   }
 }
+/*Booking*/
+.booking-main {
+  border-top: 0.25rem solid var(--accent-color2);
+}
+.booking-main h2 {
+  padding-bottom: 0;
+}
