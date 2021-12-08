@@ -125,6 +125,7 @@ header {
   border-bottom-right-radius: 0;
   border-right-style: none;
 }
+
 .showMenu {
   transform: translateX(0);
 }
@@ -165,6 +166,13 @@ header {
   border-radius: 2rem;
   margin: 1rem;
 }
+.mobile-nav li a {
+  border-top: dotted black 1px;
+}
+.mobile-nav #home {
+  border-top: none;
+}
+
 #main-nav-home,
 #mobile-nav-home {
   border-left: solid 2px;
@@ -1245,31 +1253,29 @@ hr {
 .tabcontent {
   display: none;
 }
-.program-tab-container table {
-  text-align: center;
-}
 .program-tab-container h3 {
   text-align: center;
   border-bottom: 0.2rem solid var(--primary-color);
   padding-block: 1rem;
   margin-bottom: 1rem;
 }
-.program-tab-container table {
+table {
+  text-align: center;
   padding-block: 1rem;
   margin-bottom: 2rem;
   border-collapse: collapse;
   width: 100%;
 }
 
-.program-tab-container table td {
+table td {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   padding: 1rem;
 }
-.program-tab-container table .last-right-td {
+table .last-right-td {
   border-right: none;
 }
-.program-tab-container table .last-bottom-td {
+table .last-bottom-td {
   border-bottom: none;
 }
 /*Our Book*/
@@ -1316,10 +1322,39 @@ hr {
 .disc-profile-main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-inline: 10vw;
 }
-.disc-profile-main p {
-  max-width: 50vw;
+.disc-profile-main h3 {
+  font-size: 1.2em;
+  text-align: center;
+  padding-block: 1rem;
+}
+
+.disc-profile-main div {
+  display: flex;
+  flex: 1 1 0;
+  gap: 1rem;
+  padding: 1rem;
+}
+.disc-profile-main div div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+#first-disc-div {
+  border: 0.2rem solid var(--accent-color2);
+  padding-block: 0.5rem;
+}
+#second-disc-div {
+  border: 0.2rem solid var(--primary-color);
+}
+#last-disc-div {
+  flex-direction: column;
+  border: 0.2rem solid var(--bg-dark);
+  border-radius: 2rem;
 }
 .fancy-border {
   width: 100%;
@@ -1335,6 +1370,21 @@ hr {
       var(--bg-dark) 100%
     )
     5;
+}
+.disc-profile-main table td {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+.disc-profile-main button {
+  width: 80%;
+}
+.disc-profile-main h2 {
+  padding-top: 2rem;
+}
+@media only screen and (max-width: 1100px) {
+  .disc-profile-main div {
+    flex-direction: column;
+  }
 }
 /*Our Leadership Approach*/
 
@@ -1384,4 +1434,24 @@ hr {
 }
 .booking-main h2 {
   padding-bottom: 0;
+}
+.booking-button {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 1rem;
+  height: 5rem;
+  color: var(--primary-color);
+  font-size: 1.2em;
+  margin-inline: auto;
+  padding: 1rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  height: 100%;
+}
+.booking-button:hover {
+  transform: scale(1.1);
 }
