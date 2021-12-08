@@ -1324,7 +1324,7 @@ table .last-bottom-td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-inline: 10vw;
+  margin-inline: 5vw;
 }
 .disc-profile-main h3 {
   font-size: 1.2em;
@@ -1336,7 +1336,6 @@ table .last-bottom-td {
   display: flex;
   flex: 1 1 0;
   gap: 1rem;
-  padding: 1rem;
 }
 .disc-profile-main div div {
   display: flex;
@@ -1347,14 +1346,20 @@ table .last-bottom-td {
 #first-disc-div {
   border: 0.2rem solid var(--accent-color2);
   padding-block: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
 }
 #second-disc-div {
   border: 0.2rem solid var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
 }
 #last-disc-div {
   flex-direction: column;
   border: 0.2rem solid var(--bg-dark);
   border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
 }
 .fancy-border {
   width: 100%;
@@ -1379,11 +1384,25 @@ table .last-bottom-td {
   width: 80%;
 }
 .disc-profile-main h2 {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 @media only screen and (max-width: 1100px) {
   .disc-profile-main div {
     flex-direction: column;
+  }
+  .disc-profile-main {
+    margin-inline: 1rem;
+  }
+  #first-disc-div,
+  #second-disc-div {
+    margin: 0;
+  }
+  #last-disc-div {
+    margin-top: 1rem;
+  }
+  .disc-profile-main .contact-button,
+  .disc-profile-main .booking-button {
+    width: 95%;
   }
 }
 /*Our Leadership Approach*/
