@@ -63,6 +63,7 @@ header {
   align-items: center;
   padding-block: 1rem;
 }
+
 .mobile-nav {
   display: none;
 }
@@ -1334,6 +1335,7 @@ table .last-bottom-td {
 
 .disc-profile-main div {
   display: flex;
+  align-items: center;
   flex: 1 1 0;
   gap: 1rem;
 }
@@ -1345,14 +1347,12 @@ table .last-bottom-td {
 }
 #first-disc-div {
   border: 0.2rem solid var(--accent-color2);
-  padding-block: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
 }
 #second-disc-div {
   border: 0.2rem solid var(--primary-color);
   padding: 1rem;
   margin-bottom: 0.5rem;
+  width: min(95vw, 40rem);
 }
 #last-disc-div {
   flex-direction: column;
@@ -1386,6 +1386,16 @@ table .last-bottom-td {
 .disc-profile-main h2 {
   padding-top: 1rem;
 }
+#thomas-disc {
+  max-width: 20rem;
+  padding-bottom: 1rem;
+}
+.disc-profile-main .section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 @media only screen and (max-width: 1100px) {
   .disc-profile-main div {
     flex-direction: column;
@@ -1399,11 +1409,15 @@ table .last-bottom-td {
   }
   #last-disc-div {
     margin-top: 1rem;
+    padding: 1rem;
   }
   .disc-profile-main .contact-button,
   .disc-profile-main .booking-button {
     width: 95%;
   }
+}
+.disc-traits {
+  text-align: center;
 }
 /*Our Leadership Approach*/
 
