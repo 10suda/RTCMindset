@@ -591,8 +591,9 @@ footer a:hover {
 }
 .think-positive-session img {
   width: 30vw;
-  border: var(--primary-color) solid 1rem;
+  border: var(--accent-color1) solid 1rem;
   margin-left: 4rem;
+  border-radius: 2rem;
 }
 .think-positive-session .article-text-container {
   display: flex;
@@ -602,9 +603,14 @@ footer a:hover {
   text-align: center;
   margin: 4rem 4rem 4rem 2rem;
 }
-.think-positive-session h2 {
+.think-positive-session .article-text-container :nth-child(2) {
   font-size: min(3rem, 6vw);
   padding: 0 20% 1rem 20%;
+  padding-top: 1rem;
+}
+.think-positive-session .article-text-container :first-child {
+  font-size: min(2.6rem, 5vw);
+  font-weight: 600;
 }
 .think-positive-session p {
   font-size: min(1.2em, 3vw);
