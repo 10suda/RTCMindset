@@ -1325,6 +1325,8 @@ hr {
 
 .program-container div {
   display: flex;
+  flex: 1 1 0;
+
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
@@ -1428,12 +1430,6 @@ hr {
   max-width: unset;
   width: 100%;
   margin-inline: auto;
-}
-#bursting-improv-main .program-container div {
-  width: 50%;
-}
-#bursting-improv-main .contact-button {
-  margin-top: 10rem;
 }
 #bursting-improv-main {
   border-top: 0.25rem solid var(--bg-dark);
