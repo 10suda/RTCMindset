@@ -14,6 +14,9 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+a {
+  color: black;
+}
 body {
   background-color: white;
   font-family: "Poppins", sans-serif;
@@ -352,11 +355,17 @@ footer a:hover {
   text-align: center;
   color: var(--bg-body);
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
-  animation: fadeIn linear 1s;
-  -webkit-animation: fadeIn linear 1s;
-  -moz-animation: fadeIn linear 1s;
-  -o-animation: fadeIn linear 1s;
-  -ms-animation: fadeIn linear 1s;
+  opacity: 0;
+  animation: fadeIn linear 1s forwards;
+  animation-delay: 0.5s;
+  -webkit-animation: fadeIn linear 1s forwards;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation: fadeIn linear 1s forwards;
+  -moz-animation-delay: 0.5s;
+  -o-animation: fadeIn linear 1s forwards;
+  -o-animation-delay: 0.5s;
+  -ms-animation: fadeIn linear 1s forwards;
+  -ms-animation-delay: 0.5s;
   line-height: 1.2;
 }
 @media only screen and (max-width: 890px) {
@@ -447,6 +456,61 @@ footer a:hover {
 .guiding-principle-article-right {
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
+}
+.homepage-main img {
+  overflow: hidden;
+  z-index: -100;
+  animation: moveDown ease-out 0.5s;
+  -webkit-animation: moveDown ease-out 0.5s;
+  -moz-animation: moveDown ease-out 0.5s;
+  -o-animation: moveDown ease-out 0.5s;
+  -ms-animation: moveDown ease-out 0.5s;
+}
+@keyframes moveDown {
+  0% {
+    margin-top: -100rem;
+    margin-bottom: 100rem;
+  }
+  100% {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+@-moz-keyframes moveDown {
+  0% {
+    margin-top: -100rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes moveDown {
+  0% {
+    margin-top: -100rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@-o-keyframes moveDown {
+  0% {
+    margin-top: -100rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@-ms-keyframes moveDown {
+  0% {
+    margin-top: -100rem;
+  }
+  100% {
+    margin-top: 0;
+  }
 }
 .move-left-animation {
   animation: moveLeft linear 0.5s;
@@ -852,16 +916,7 @@ footer a:hover {
   text-align: center;
   padding: 0;
 }
-#about-social-wrapper-about-us {
-  width: 25rem;
-  justify-content: flex-start;
-}
-@media only screen and (min-width: 1100px) {
-  #about-social-wrapper-about-us .hr-for-hire {
-    width: 28%;
-    margin-top: -2.3rem;
-  }
-}
+
 .about-title-container {
   display: flex;
   flex-direction: column;
@@ -907,21 +962,42 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.od-main {
+.section-descriptor {
+  max-width: 50rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+@media only screen and (min-width: 1100px) {
+  .section-descriptor {
+    flex-direction: row;
+  }
+}
+.od-main,
+.hr-main {
   padding: 1rem;
   border-top: var(--bg-dark) 0.25rem solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.od-main a:hover {
+  color: var(--bg-dark);
 }
 .coaching-main h2,
-.od-main h2 {
+.od-main h2,
+.hr-main h2 {
   padding-block: 4rem;
   text-align: center;
 }
 .coaching-container-outside,
-.od-container-outside {
+.od-container-outside,
+.hr-container-outside {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -933,7 +1009,8 @@ footer a:hover {
 .coaching-container-inside {
   max-width: 30vw;
 }
-.od-container-inside {
+.od-container-inside,
+.hr-container-inside {
   max-width: 22.5vw;
 }
 .icon-header-combo {
@@ -957,11 +1034,13 @@ footer a:hover {
 }
 @media only screen and (max-width: 890px) {
   .coaching-container-outside,
-  .od-container-outside {
+  .od-container-outside,
+  .hr-container-outside {
     flex-direction: column;
   }
   .coaching-container-inside,
-  .od-container-inside {
+  .od-container-inside,
+  .hr-container-inside {
     max-width: 80vw;
   }
 }
@@ -1149,9 +1228,6 @@ footer a:hover {
   padding-block: 2rem;
   gap: 2rem;
 }
-.about-social-big .hr-for-hire {
-  width: 29%;
-}
 
 @media only screen and (max-width: 1100px) {
   .person-container {
@@ -1291,28 +1367,6 @@ footer a:hover {
   }
   .label-wrapper {
     padding-bottom: 1.5rem;
-  }
-}
-.about-social-wrapper {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.hr-for-hire {
-  width: 28%;
-  margin-top: -2.2rem;
-  margin-left: -1rem;
-}
-@media only screen and (min-width: 1100px) {
-  .about-social-wrapper {
-    align-items: unset;
-  }
-  .hr-for-hire {
-    width: 40%;
-    margin-top: -2.3rem;
-    margin-inline: -1rem;
   }
 }
 
@@ -1808,4 +1862,84 @@ table .last-left-td {
 }
 .booking-button:hover {
   transform: scale(1.1);
+}
+/*HR for hire*/
+.hr-main {
+  border-top: var(--accent-color2) 0.25rem solid;
+}
+
+.hr-container-outside {
+  gap: 0;
+}
+.hr-container-inside {
+  padding: 1rem;
+}
+.hr-container-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hr-container-outside .hr-container-inside:nth-child(1) {
+  border-top: 0.25rem solid var(--accent-color2);
+  border-right: 0.25rem solid var(--accent-color2);
+  border-left: 0.25rem solid var(--accent-color2);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.hr-container-outside .hr-container-inside:nth-child(2) {
+  border-left: 0.25rem solid var(--primary-color);
+  border-right: 0.25rem solid var(--primary-color);
+}
+.hr-container-outside .hr-container-inside:nth-child(3) {
+  border-left: 0.25rem solid var(--bg-dark);
+  border-right: 0.25rem solid var(--bg-dark);
+}
+.hr-container-outside .hr-container-inside:nth-child(4) {
+  border-left: 0.25rem solid var(--accent-color3);
+  border-right: 0.25rem solid var(--accent-color3);
+  border-bottom: 0.25rem solid var(--accent-color3);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+@media only screen and (min-width: 890px) {
+  .hr-container-outside .hr-container-inside:nth-child(1) {
+    border: 0;
+    border-radius: 0;
+    border-top: 0.25rem solid var(--accent-color2);
+    border-left: 0.25rem solid var(--accent-color2);
+    border-bottom: 0.25rem solid var(--accent-color2);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+  .hr-container-outside .hr-container-inside:nth-child(2) {
+    border: 0;
+    border-radius: 0;
+    border-top: 0.25rem solid var(--primary-color);
+    border-bottom: 0.25rem solid var(--primary-color);
+  }
+  .hr-container-outside .hr-container-inside:nth-child(3) {
+    border: 0;
+    border-radius: 0;
+    border-top: 0.25rem solid var(--bg-dark);
+    border-bottom: 0.25rem solid var(--bg-dark);
+  }
+  .hr-container-outside .hr-container-inside:nth-child(4) {
+    border: 0;
+    border-radius: 0;
+    border-top: 0.25rem solid var(--accent-color3);
+    border-right: 0.25rem solid var(--accent-color3);
+    border-bottom: 0.25rem solid var(--accent-color3);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+}
+/*hr for hire button*/
+.about-social-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.about-social-wrapper .hr-for-hire {
+  width: 4.5rem;
 }
